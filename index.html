@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#FFFFFF">
+<title>Hiba Saad Real Estate</title>
+<meta name="description" content="Hiba Saad, Real Estate Consultant in Beirut since 2006. Offices and apartments for sale and rent in Achrafieh, Hamra and Gefinor.">
+<meta property="og:title" content="Hiba Saad · Real Estate Consultant">
+<meta property="og:description" content="The right investment starts in the heart of Beirut.">
+<meta property="og:image" content="img/dx-1.webp">
+<link rel="icon" href="img/mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;1,6..96,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#FFFFFF;--soft:#F4F4F2;--card:#FFFFFF;
+  --ink:#111111;--ink2:#2A2A2A;--muted:#6F6F6F;--line:#E3E3E0;--silver:#C9C9C6;
+  --silvergrad:linear-gradient(100deg,#8E8E8E 0%,#E6E6E3 50%,#9A9A9A 100%);
+  --serif:'Bodoni Moda',Georgia,serif;--sans:'Montserrat',system-ui,sans-serif;
+  --wrap:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 15.5px/1.7 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.eyebrow{font:500 11px/1 var(--sans);letter-spacing:.34em;text-transform:uppercase;color:var(--muted)}
+.serif{font-family:var(--serif);font-weight:500;letter-spacing:-.005em;line-height:1.06}
+.rule{display:block;width:56px;height:2px;background:var(--ink);margin:18px 0 22px}
+.center{text-align:center}.center .rule{margin-left:auto;margin-right:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 30px;font:600 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;transition:.25s;border-radius:0}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#333}
+.btn-line{border:1px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn-white{background:#fff;color:var(--ink)}
+.btn-white:hover{background:var(--soft)}
+svg.i{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.logo-img{mix-blend-mode:multiply}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);transition:box-shadow .3s}
+.hdr.solid{box-shadow:0 1px 0 var(--line)}
+.hdr .in{display:flex;align-items:center;gap:30px;height:84px}
+.logo img{height:44px;width:auto}
+.nav{display:flex;gap:30px;margin-left:auto}
+.nav a{font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:8px 0;position:relative;white-space:nowrap;color:var(--ink2)}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--ink);transition:right .3s}
+.nav a:hover::after,.nav a.on::after{right:0}
+.hdr .call{display:inline-flex;align-items:center;gap:8px;font:600 13px/1 var(--sans);letter-spacing:.06em;padding:12px 18px;background:var(--ink);color:#fff}
+.hdr .call:hover{background:#333}
+.hdr .fav{position:relative;display:grid;place-items:center;width:40px;height:40px}
+.hdr .fav b{position:absolute;top:3px;right:1px;min-width:17px;height:17px;border-radius:9px;background:var(--ink);color:#fff;font:600 10px/17px var(--sans);text-align:center;padding:0 4px}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#111}
+.hero .bg{position:absolute;inset:0;background:url(img/dx-1.webp) center 45%/cover;opacity:0;animation:fadeIn 1.4s ease-out forwards}
+@keyframes fadeIn{to{opacity:1}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.45) 0%,rgba(10,10,10,.25) 40%,rgba(10,10,10,.88) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:150px;padding-bottom:64px}
+.hero .eyebrow{color:#E6E6E3}
+.hero h1{font-size:clamp(42px,6.6vw,88px);max-width:14ch;margin:22px 0 18px}
+.hero h1 em{font-style:italic;font-weight:500}
+.hero p.lead{font-weight:300;font-size:17px;max-width:46ch;opacity:.92}
+.hero h1,.hero p.lead,.hero .eyebrow{text-shadow:0 2px 20px rgba(0,0,0,.4)}
+.search{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr) auto;background:#fff;color:var(--ink);box-shadow:0 30px 60px -30px rgba(0,0,0,.7);max-width:960px}
+.search label{display:block;padding:16px 24px 14px;border-right:1px solid var(--line)}
+.search label span{display:block;font:600 10px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.search select{width:100%;border:0;font:500 16px/1.3 var(--sans);appearance:none;-webkit-appearance:none;outline:0;cursor:pointer;padding-right:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23111' fill='none'/%3E%3C/svg%3E") right center no-repeat}
+.search .btn{height:auto;margin:10px;padding:0 34px}
+.scroll-cue{position:absolute;right:28px;bottom:70px;z-index:2;writing-mode:vertical-rl;font:500 10px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;opacity:.8;display:flex;align-items:center;gap:14px}
+.scroll-cue::after{content:"";width:1px;height:60px;background:linear-gradient(#fff,transparent)}
+
+/* strip */
+.strip{background:var(--ink);color:#EDEDEA}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:30px 24px;border-left:1px solid rgba(255,255,255,.12)}
+.strip div:first-child{border-left:0;padding-left:0}
+.strip b{display:block;font:500 28px/1.15 var(--serif);color:#fff}
+.strip span{font:400 11px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--silver)}
+
+section.sec{padding:110px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:46px}
+.sec-head h2,.h2{font-size:clamp(34px,4.2vw,56px)}
+.sec-head p{color:var(--muted);max-width:44ch}
+.link-arrow{display:inline-flex;align-items:center;gap:10px;font:600 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
+.link-arrow:hover{gap:16px}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.card{background:var(--card);border:1px solid var(--line);overflow:hidden;transition:transform .35s,box-shadow .35s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 50px -30px rgba(0,0,0,.35)}
+.card .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--soft)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.card:hover .ph img{transform:scale(1.05)}
+.tag{position:absolute;left:16px;top:16px;background:var(--ink);color:#fff;font:600 10px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:9px 12px}
+.tag.w{background:#fff;color:var(--ink);left:auto;right:62px}
+.heart{position:absolute;right:14px;top:12px;width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--ink);transition:.2s}
+.heart.on svg{fill:currentColor}
+.card .body{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1}
+.loc{display:flex;align-items:center;gap:7px;font:500 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.loc svg{width:14px;height:14px}
+.card h3{font:500 25px/1.15 var(--serif);margin:12px 0 16px}
+.price{font:500 25px/1 var(--serif);color:var(--ink)}
+.price small{display:block;font:500 10px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.specs{display:flex;gap:18px;flex-wrap:wrap;margin-top:auto;padding-top:18px;border-top:1px solid var(--line);color:var(--ink2);font-size:13.5px}
+.specs span{display:inline-flex;align-items:center;gap:7px}
+.specs svg{width:17px;height:17px}
+.card .row{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:18px;gap:12px}
+
+/* spotlight */
+.spot{background:var(--soft)}
+.spot .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:center}
+.spot .tower{position:relative;max-width:420px}
+.spot .tower img{width:100%;aspect-ratio:1/2;object-fit:cover}
+.spot .tower::before{content:"";position:absolute;inset:24px -24px -24px 24px;border:1px solid var(--ink);z-index:-1}
+.spot .tower{z-index:0}
+.spot ul{list-style:none;margin:30px 0 34px;border-top:1px solid var(--line)}
+.spot li{display:flex;gap:16px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line);font-weight:500}
+.spot li svg{width:20px;height:20px}
+.quote{font:italic 500 22px/1.45 var(--serif);color:var(--ink2);padding-left:20px;border-left:2px solid var(--ink)}
+
+/* explore tiles */
+.areas{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.area{position:relative;aspect-ratio:3/4;overflow:hidden;color:#fff;display:flex;align-items:flex-end;padding:28px}
+.area img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s;filter:grayscale(.35)}
+.area::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.85));z-index:1}
+.area:hover img{transform:scale(1.06);filter:grayscale(0)}
+.area div{position:relative;z-index:2}
+.area h3{font:500 34px/1.05 var(--serif)}
+.area p{font:500 11px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;margin-top:12px;color:#E6E6E3}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.svc>div{padding:44px 36px 10px 0;margin-right:36px;border-right:1px solid var(--line)}
+.svc>div:last-child{border-right:0;margin-right:0}
+.svc .n{font:500 16px/1 var(--serif);letter-spacing:.1em;color:var(--muted)}
+.svc h3{font:500 30px/1.1 var(--serif);margin:16px 0 12px}
+.svc p{color:var(--muted)}
+
+/* sell */
+.sell{background:var(--ink);color:#E8E8E5}
+.sell .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.sell h2{color:#fff}
+.sell .rule{background:#fff}
+.sell .eyebrow{color:var(--silver)}
+.sell p{opacity:.8;font-weight:300}
+.sell ul{list-style:none;margin-top:28px;display:grid;gap:14px}
+.sell li{display:flex;gap:14px;align-items:flex-start;font-weight:300}
+.sell li svg{margin-top:4px}
+.form{background:#fff;color:var(--ink);padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form .full{grid-column:1/-1}
+.form label span{display:block;font:600 10px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.form input,.form select,.form textarea{width:100%;border:0;border-bottom:1px solid var(--line);padding:10px 0;background:transparent;outline:0;font-size:16px;border-radius:0}
+.form select{appearance:none;-webkit-appearance:none}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--ink)}
+.form textarea{resize:vertical;min-height:70px}
+.form .note{font-size:13px;color:var(--muted)}
+.seg{display:flex;border:1px solid var(--ink)}
+.seg label{flex:1;position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block!important;margin:0!important;text-align:center;padding:13px 0;font:600 11px/1 var(--sans)!important;letter-spacing:.22em!important;text-transform:uppercase;color:var(--ink)!important}
+.seg input:checked+span{background:var(--ink);color:#fff!important}
+
+/* contact */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.cbox{border:1px solid var(--line);padding:36px}
+.cbox h3{font:500 26px/1.1 var(--serif);margin:16px 0 10px}
+.cbox p{color:var(--muted);margin-bottom:18px}
+.cbox a.l{display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid var(--line);font-weight:500}
+.cbox a.l:hover{text-decoration:underline}
+.cbox .ic{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff}
+
+footer{background:var(--soft);color:var(--ink2);padding:70px 0 30px;border-top:1px solid var(--line)}
+footer .top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;padding-bottom:50px;border-bottom:1px solid var(--line)}
+footer .top img{height:54px;width:auto;margin-bottom:18px}
+footer h4{font:600 11px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;margin-bottom:20px}
+footer .top a{display:block;padding:5px 0;color:var(--muted)}
+footer .top a:hover{color:var(--ink)}
+footer .bot{display:flex;justify-content:space-between;gap:20px;padding-top:26px;font-size:12.5px;color:var(--muted);flex-wrap:wrap}
+footer p{color:var(--muted);max-width:34ch}
+
+/* page head */
+.phead{padding:150px 0 50px;background:var(--soft);border-bottom:1px solid var(--line)}
+.phead h1{font-size:clamp(40px,5vw,64px)}
+.crumbs{font-size:12.5px;color:var(--muted);letter-spacing:.06em;margin-bottom:16px}
+.crumbs a:hover{color:var(--ink)}
+.filters{display:flex;gap:14px;flex-wrap:wrap;align-items:end;margin-top:30px}
+.filters label.f{flex:1;min-width:150px}
+.filters label.f span{display:block;font:600 10px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.filters select{width:100%;height:50px;border:1px solid var(--line);background:#fff;padding:0 14px;outline:0;border-radius:0}
+.filters select:focus{border-color:var(--ink)}
+.filters .seg{min-width:230px;background:#fff}
+.count{margin:40px 0 24px;color:var(--muted);font-size:13.5px;letter-spacing:.06em}
+.empty{padding:60px 0 110px;text-align:center;color:var(--muted)}
+.empty h3{font:500 30px/1.2 var(--serif);color:var(--ink);margin-bottom:10px}
+
+/* property page */
+.pp{padding-top:104px}
+.gal{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:250px 250px;gap:10px;margin-top:20px}
+.gal button{position:relative;overflow:hidden;background:var(--soft)}
+.gal button img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.gal button:hover img{transform:scale(1.04)}
+.gal button:first-child{grid-row:1/3}
+.gal .more{position:absolute;inset:0;background:rgba(0,0,0,.55);color:#fff;display:grid;place-items:center;font:600 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.gal .all{position:absolute;left:16px;bottom:16px;background:#fff;color:var(--ink);padding:11px 16px;font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;display:flex;gap:8px;align-items:center}
+.pp-grid{display:grid;grid-template-columns:1fr 380px;gap:60px;margin:46px 0 100px;align-items:start}
+.pp h1{font-size:clamp(34px,4vw,52px);margin:14px 0 10px}
+.pp .sub{color:var(--muted);font-size:17px}
+.kf{display:grid;grid-template-columns:repeat(var(--n,4),1fr);border:1px solid var(--line);margin:34px 0}
+.kf div{padding:22px 20px;border-left:1px solid var(--line)}
+.kf div:first-child{border-left:0}
+.kf svg{width:22px;height:22px;margin-bottom:12px}
+.kf b{display:block;font:500 26px/1.1 var(--serif)}
+.kf span{font:500 10px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.pp h2{font:500 30px/1.1 var(--serif);margin:46px 0 16px}
+.pp .desc p{margin-bottom:14px;color:#3d3d3d;font-weight:300;font-size:16.5px}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:0 30px;list-style:none}
+.feat li{display:flex;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}
+.mapbox{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 28px;background:var(--soft);flex-wrap:wrap}
+.mapbox b{font:500 24px/1.1 var(--serif)}
+.side{position:sticky;top:110px;border:1px solid var(--ink);padding:34px}
+.side .price{font-size:38px}
+.side .btn{width:100%;margin-top:12px}
+.side .agent{display:flex;align-items:center;gap:14px;margin:26px 0 4px;padding-top:24px;border-top:1px solid var(--line)}
+.side .agent img{width:38px;height:auto}
+.side .agent b{display:block;font:500 19px/1.1 var(--serif)}
+.side .agent span{font-size:13px;color:var(--muted)}
+.side .tools{display:flex;gap:10px;margin-top:16px}
+.side .tools button{flex:1;height:46px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;gap:8px;font:600 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.side .tools button:hover{border-color:var(--ink)}
+.side .tools button.on svg{fill:currentColor}
+.mprice,.mbar{display:none}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:#0B0B0B;display:none;flex-direction:column}
+.lb.open{display:flex}
+.lb .top{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;color:#ddd;font-size:13px;letter-spacing:.14em}
+.lb .stage{flex:1;display:flex;align-items:center;justify-content:center;position:relative;min-height:0;padding:0 70px}
+.lb .stage img{max-width:100%;max-height:100%;object-fit:contain}
+.lb .nv{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.3);color:#fff;display:grid;place-items:center}
+.lb .nv:hover{border-color:#fff}
+.lb .pv{left:14px}.lb .nx{right:14px}
+.lb .x{color:#fff;width:44px;height:44px;display:grid;place-items:center}
+.lb .th{display:flex;gap:8px;justify-content:center;padding:16px;overflow-x:auto}
+.lb .th img{width:76px;height:54px;object-fit:cover;opacity:.4;cursor:pointer;border:1px solid transparent;flex:none}
+.lb .th img.on{opacity:1;border-color:#fff}
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,30px);background:var(--ink);color:#fff;padding:14px 22px;font-size:13.5px;opacity:0;transition:.3s;z-index:120;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--ink);display:grid;place-items:center;box-shadow:0 14px 30px -12px rgba(0,0,0,.6);border:2px solid #fff;transition:transform .25s}
+.wa-float:hover{transform:translateY(-2px)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero .bg{animation:none;opacity:1}*{transition:none!important}}
+
+@media (max-width:1020px){
+  .grid,.areas{grid-template-columns:1fr 1fr}
+  .spot .wrap,.sell .wrap,.pp-grid{grid-template-columns:1fr;gap:50px}
+  .spot .tower{max-width:320px}
+  .side{position:static}
+  footer .top{grid-template-columns:1fr 1fr}
+  .hdr .call span{display:none}
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .hdr .in{height:auto;flex-wrap:wrap;gap:0 12px;padding:12px 16px 0}
+  .logo img{height:36px}
+  .hdr .tools{margin-left:auto;display:flex;align-items:center;gap:6px}
+  .hdr .call{padding:10px 12px}
+  .nav{order:3;width:100%;margin:6px 0 0;gap:10px;justify-content:space-between}
+  .nav a{font-size:10.5px;letter-spacing:.12em;padding:10px 0 12px}
+  .hero .wrap{padding-top:150px;padding-bottom:40px}
+  .hero p.lead{font-size:15.5px}
+  .search{grid-template-columns:1fr 1fr;margin-top:28px}
+  .search label{padding:12px 14px;border-bottom:1px solid var(--line)}
+  .search label:nth-child(2){border-right:0}
+  .search label:nth-child(3){grid-column:1/-1;border-right:0}
+  .search .btn{grid-column:1/-1;height:52px}
+  .scroll-cue{display:none}
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .strip div{padding:22px 14px;border-left:0;border-top:1px solid rgba(255,255,255,.12)}
+  .strip div:nth-child(-n+2){border-top:0}
+  .strip div:first-child{padding-left:14px}
+  .strip b{font-size:22px}
+  .strip span{font-size:10px}
+  section.sec{padding:70px 0}
+  .sec-head{flex-direction:column;align-items:flex-start;margin-bottom:30px}
+  .grid,.areas,.svc{grid-template-columns:1fr}
+  .areas .area{aspect-ratio:16/10}
+  .svc>div{border-right:0;margin-right:0;padding:30px 0;border-bottom:1px solid var(--line)}
+  .form{grid-template-columns:1fr;padding:24px}
+  footer .top{grid-template-columns:1fr}
+  .phead{padding:140px 0 36px}
+  .filters .seg{width:100%}
+  .filters label.f{min-width:calc(50% - 7px)}
+  .pp{padding-top:118px}
+  .gal{grid-template-columns:1fr 1fr;grid-template-rows:240px 110px}
+  .gal button:first-child{grid-column:1/3;grid-row:1}
+  .kf{grid-template-columns:1fr 1fr}
+  .kf div:nth-child(odd){border-left:0}
+  .kf div:nth-child(n+3){border-top:1px solid var(--line)}
+  .feat{grid-template-columns:1fr}
+  .mprice{display:block;margin-top:22px;font-size:32px}
+  .mbar{display:flex;align-items:center;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+  .mbar .price{font-size:20px;margin-right:auto}
+  .mbar .price small{font-size:9px;margin-bottom:5px}
+  .mbar .btn{height:46px;padding:0 16px;letter-spacing:.12em}
+  body.pp-on .wa-float{display:none}
+  body.pp-on footer{padding-bottom:110px}
+  .wa-float{width:50px;height:50px;right:14px;bottom:14px}
+  .lb .stage{padding:0 8px}.lb .nv{display:none}
+  .side{padding:24px}
+}
+</style>
+</head>
+<body>
+<header class="hdr" id="hdr"><div class="wrap in">
+  <a class="logo" href="#/" aria-label="Hiba Saad Real Estate home"><img class="logo-img" src="img/logo.png" alt="Hiba Saad, Real Estate Consultant"></a>
+  <nav class="nav" id="nav">
+    <a href="#/" data-r="home">Home</a>
+    <a href="#/properties" data-r="properties">Properties</a>
+    <a href="#/list" data-r="list">List</a>
+    <a href="#/about" data-r="about">About</a>
+    <a href="#/contact" data-r="contact">Contact</a>
+  </nav>
+  <div class="tools" style="display:flex;align-items:center;gap:8px">
+    <a class="fav" href="#/saved" aria-label="Saved properties"><svg class="i" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><b id="favN" hidden>0</b></a>
+    <a class="call jsTel" data-n="3008025" href="#"><svg class="i" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>03 008 025</span></a>
+  </div>
+</div></header>
+
+<main id="app"></main>
+
+<footer><div class="wrap">
+  <div class="top">
+    <div><img class="logo-img" src="img/logo.png" alt="Hiba Saad, Real Estate Consultant"><p>Guaranteed to provide the highest standards. Real estate consultant in Beirut since 2006.</p></div>
+    <div><h4>Properties</h4><a href="#/properties?deal=sale">For sale</a><a href="#/properties?deal=rent">For rent</a><a href="#/properties?type=Office">Offices</a><a href="#/properties?type=Apartment">Apartments</a></div>
+    <div><h4>Owners</h4><a href="#/list">List your property</a><a href="#/about">About Hiba</a><a href="#/saved">Saved properties</a></div>
+    <div><h4>Contact</h4><a class="jsTel" data-n="3008025" href="#">+961 3 008 025</a><a class="jsTel" data-n="70981972" href="#">+961 70 981 972</a><a href="mailto:saad.hibaa@gmail.com">saad.hibaa@gmail.com</a><a href="https://www.instagram.com/hibasaad.realestate/" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+  <div class="bot"><span>© <span id="yr"></span> Hiba Saad Real Estate. All rights reserved.</span><span>Beirut · Lebanon</span></div>
+</div></footer>
+
+<a class="wa-float" id="waFloat" href="#" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.1 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg></a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo gallery">
+  <div class="top"><span id="lbN"></span><button class="x" id="lbX" aria-label="Close"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="stage"><button class="nv pv" id="lbP" aria-label="Previous"><svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button><img id="lbI" alt=""><button class="nv nx" id="lbNx" aria-label="Next"><svg class="i" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></div>
+  <div class="th" id="lbT"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const CONFIG = {
+  siteUrl: 'https://hibasaab.vercel.app/',    // links inside WhatsApp messages point here
+  whatsapp: '3008025',                          // +961 3 008 025
+  country: '961',
+  email: 'saad.hibaa@gmail.com',
+  instagram: 'https://www.instagram.com/hibasaad.realestate/'
+};
+
+/* ---- listings: edit here ---- */
+const PROPS = [
+  { id:'duplex-gefinor', deal:'sale', type:'Apartment', kind:'Duplex', area:'Gefinor', region:'Hamra, Beirut',
+    title:'Duplex Apartment in Gefinor', price:1300000, size:300,
+    img:['dx-1','dx-2','dx-3','dx-4','dx-5','dx-6','dx-7','dx-8','dx-9'], badge:'Duplex',
+    intro:'A spacious 300 m² duplex in Gefinor, in the heart of Ras Beirut.',
+    desc:['Two levels of generous living: bright reception and dining rooms open onto each other under classic arches and crown mouldings, with tall windows and light marble floors throughout.',
+          'A fully fitted kitchen with a service room, a quiet private corridor to the bedrooms, and a marble-clad building entrance complete a home made for family life in central Beirut.'],
+    features:['300 m² over two floors','Marble floors throughout','Large reception & separate dining room','Arches & crown mouldings','Fitted kitchen with service room','Marble building lobby'] },
+  { id:'office-achrafieh-217', deal:'rent', type:'Office', area:'Achrafieh', region:'Beirut',
+    title:'217 m² Office in Achrafieh', price:null, size:217,
+    img:['o2-1','o2-2','o2-3','o2-4','o2-5','o2-6'], badge:'217 m²',
+    intro:'A prestigious setting for your business in Achrafieh.',
+    desc:['A bright, open-plan office with floor-to-ceiling windows and city views, glass-partitioned private offices with blinds, and porcelain floors throughout.',
+          'A fitted kitchenette and modern washrooms make it ready for a team to move in.'],
+    features:['Floor-to-ceiling windows','Open-plan workspace','Glass-partitioned private offices','Fitted kitchenette','Modern washrooms','Central A/C'] },
+  { id:'office-achrafieh-123', deal:'rent', type:'Office', area:'Achrafieh', region:'Beirut',
+    title:'123 m² Office in Achrafieh', price:null, size:123,
+    img:['o1-1','o1-2','o1-3','o1-4','o1-5','o1-6'], badge:'123 m²',
+    intro:'An exceptional address in Achrafieh. A refined workspace.',
+    desc:['A corner office wrapped in floor-to-ceiling windows, with open views over the city and plenty of natural light.',
+          'Glass-partitioned rooms, a fitted kitchenette and a modern washroom, in a well-kept office building.'],
+    features:['Corner office with city views','Floor-to-ceiling windows','Glass-partitioned rooms','Fitted kitchenette','Modern washroom','Central A/C'] }
+];
+
+/* ---- helpers ---- */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const app=$('#app');
+const money=n=>'$'+n.toLocaleString('en-US');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const intl=p=>CONFIG.country+p;
+const link=p=>(CONFIG.siteUrl||location.href.split('#')[0])+'#/p/'+p.id;
+const img=(k,s)=>'img/'+k+(s?'-s':'')+'.webp';
+const byId=id=>PROPS.find(p=>p.id===id);
+const dealTxt=p=>p.deal==='rent'?'For rent':'For sale';
+const priceTxt=p=>p.price?money(p.price)+(p.deal==='rent'?' / month':''):'On request';
+const priceLbl=p=>p.price?(p.deal==='rent'?'Rent':'Sale value'):'Price';
+function openWa(text){const u='https://wa.me/'+intl(CONFIG.whatsapp)+'?text='+encodeURIComponent(text);const w=window.open(u,'_blank');if(w){try{w.opener=null}catch(e){}}else location.href=u}
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),2200)}
+
+const IC={
+  pin:'<svg class="i" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+  area:'<svg class="i" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 9h5M15 4v5M20 15h-5M9 20v-5"/></svg>',
+  type:'<svg class="i" viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M9 21v-5h6v5M8 8h1M15 8h1M8 12h1M15 12h1"/></svg>',
+  deal:'<svg class="i" viewBox="0 0 24 24"><path d="M20.6 13.4L13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg>',
+  leaf:'<svg class="i" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 15-15-1 10-7 15-15 15zM5 19l7-7"/></svg>',
+  park:'<svg class="i" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M10 16V8h3a2.5 2.5 0 0 1 0 5h-3"/></svg>',
+  build:'<svg class="i" viewBox="0 0 24 24"><path d="M6 21V3h12v18M10 7h4M10 11h4M10 15h4M3 21h18"/></svg>',
+  heart:'<svg class="i" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>',
+  check:'<svg class="i" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+  arrow:'<svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+  wa:'<svg class="i" viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.8L4 20z"/></svg>',
+  phone:'<svg class="i" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>',
+  mail:'<svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>',
+  share:'<svg class="i" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg>',
+  grid:'<svg class="i" viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>',
+  map:'<svg class="i" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></svg>',
+  ig:'<svg class="i" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r=".6"/></svg>'
+};
+
+/* saved (per browser) */
+const FKEY='hibasaad_saved';
+let favs=[];try{favs=JSON.parse(localStorage.getItem(FKEY)||'[]').filter(byId)}catch(e){}
+function saveFavs(){try{localStorage.setItem(FKEY,JSON.stringify(favs))}catch(e){};const b=$('#favN');b.textContent=favs.length;b.hidden=!favs.length}
+function toggleFav(id){const i=favs.indexOf(id);if(i>-1)favs.splice(i,1);else favs.push(id);saveFavs();toast(i>-1?'Removed from saved':'Saved to your list');$$('[data-fav="'+id+'"]').forEach(b=>b.classList.toggle('on',favs.includes(id)))}
+
+/* ---- pieces ---- */
+function specs(p){return `<div class="specs"><span>${IC.area}${p.size} m²</span><span>${IC.type}${p.kind||p.type}</span><span>${IC.deal}${dealTxt(p)}</span></div>`}
+function card(p){
+  return `<a class="card reveal" href="#/p/${p.id}">
+    <div class="ph"><img src="${img(p.img[0],1)}" alt="${esc(p.title)}" loading="lazy">
+      <span class="tag">${dealTxt(p)}</span>${p.badge?`<span class="tag w">${p.badge}</span>`:''}
+      <button class="heart ${favs.includes(p.id)?'on':''}" data-fav="${p.id}" aria-label="Save">${IC.heart}</button></div>
+    <div class="body"><div class="loc">${IC.pin}${p.area}, ${p.region}</div><h3>${esc(p.title)}</h3>
+      <div class="row"><div class="price"><small>${priceLbl(p)}</small>${priceTxt(p)}</div><span class="link-arrow">View ${IC.arrow}</span></div>
+      ${specs(p)}</div></a>`;
+}
+const AREAS=[...new Set(PROPS.map(p=>p.area))];
+const TYPES=[...new Set(PROPS.map(p=>p.type))];
+
+/* ---- pages ---- */
+function home(){
+  return `
+  <section class="hero"><div class="bg"></div>
+    <div class="wrap">
+      <div class="eyebrow">Real Estate Consultant · Since 2006</div>
+      <h1 class="serif">The right investment starts in <em>the heart of Beirut.</em></h1>
+      <p class="lead">Offices and homes for sale and rent in Achrafieh, Hamra and across Beirut, guaranteed to the highest standards.</p>
+      <form class="search" id="search">
+        <label><span>Looking to</span><select name="deal"><option value="">Buy or rent</option><option value="sale">Buy</option><option value="rent">Rent</option></select></label>
+        <label><span>Property type</span><select name="type"><option value="">All types</option>${TYPES.map(t=>`<option>${t}</option>`).join('')}</select></label>
+        <label><span>Location</span><select name="area"><option value="">All Beirut</option>${AREAS.map(a=>`<option>${a}</option>`).join('')}</select></label>
+        <button class="btn btn-dark" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="scroll-cue">Scroll</div>
+  </section>
+
+  <div class="strip"><div class="wrap">
+    <div><b>Since 2006</b><span>In Beirut real estate</span></div>
+    <div><b>Sale · Rent</b><span>Homes &amp; offices</span></div>
+    <div><b>Achrafieh</b><span>Hamra · Gefinor</span></div>
+    <div><b>Verified</b><span>Trusted consultant</span></div>
+  </div></div>
+
+  <section class="sec"><div class="wrap">
+    <div class="sec-head reveal"><div><div class="eyebrow">Featured listings</div><span class="rule"></span><h2 class="serif">Available now</h2></div>
+      <a class="link-arrow" href="#/properties">All properties ${IC.arrow}</a></div>
+    <div class="grid">${PROPS.map(card).join('')}</div>
+  </div></section>
+
+  <section class="sec spot" id="rive-gauche"><div class="wrap">
+    <div class="tower reveal"><img src="${img('tower')}" alt="Rive Gauche tower, Achrafieh" loading="lazy"></div>
+    <div class="reveal"><div class="eyebrow">Property opportunity · Achrafieh</div><span class="rule"></span>
+      <h2 class="h2 serif">Rive Gauche</h2>
+      <p style="color:var(--muted);margin-top:14px;font-size:17px">A distinguished address for your business. Premium commercial spaces for rent.</p>
+      <ul>
+        <li>${IC.leaf}LEED-certified tower</li>
+        <li>${IC.area}From 125 to 472 m²</li>
+        <li>${IC.build}Core &amp; shell or fully finished offices</li>
+        <li>${IC.park}Additional parking available</li>
+      </ul>
+      <div style="display:flex;gap:14px;flex-wrap:wrap"><button class="btn btn-dark" data-wa="rive">${IC.wa} Book a private viewing</button><a class="btn btn-line" href="#/properties?type=Office">See offices</a></div>
+    </div>
+  </div></section>
+
+  <section class="sec"><div class="wrap">
+    <div class="sec-head reveal"><div><div class="eyebrow">Explore</div><span class="rule"></span><h2 class="serif">Find your space</h2></div><p>Workspaces that make an impression and homes made for family life, in Beirut's most wanted addresses.</p></div>
+    <div class="areas">
+      <a class="area reveal" href="#/properties?type=Office"><img src="${img('o2-1')}" alt="Offices" loading="lazy"><div><h3>Offices</h3><p>${PROPS.filter(p=>p.type==='Office').length} available · Achrafieh</p></div></a>
+      <a class="area reveal" href="#/properties?type=Apartment"><img src="${img('dx-3')}" alt="Homes" loading="lazy"><div><h3>Homes</h3><p>${PROPS.filter(p=>p.type==='Apartment').length} available · Gefinor</p></div></a>
+      <a class="area reveal" href="#/" data-scroll="rive-gauche"><img src="${img('beirut')}" alt="Beirut" loading="lazy"><div><h3>Invest in Beirut</h3><p>A city of opportunity</p></div></a>
+    </div>
+  </div></section>
+
+  <section class="sec" id="about" style="background:var(--soft)"><div class="wrap">
+    <div class="sec-head reveal"><div><div class="eyebrow">About Hiba Saad</div><span class="rule"></span><h2 class="serif">Invest wise. Live better.</h2></div><p>Hiba Saad has guided buyers, tenants and owners through Beirut's property market since 2006, with one promise: the highest standards at every step.</p></div>
+    <div class="svc">
+      <div class="reveal"><span class="n">01</span><h3>Buy &amp; invest</h3><p>Homes and investment properties chosen for their address, quality and value, with honest advice from the first visit.</p></div>
+      <div class="reveal"><span class="n">02</span><h3>Rent &amp; lease</h3><p>Offices and apartments for rent, from ready-to-move-in spaces to core &amp; shell floors you can shape to your business.</p></div>
+      <div class="reveal"><span class="n">03</span><h3>Sell with confidence</h3><p>Your property presented beautifully to serious buyers and tenants, with private viewings handled for you.</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec sell" id="list"><div class="wrap">
+    <div class="reveal"><div class="eyebrow">For owners</div><span class="rule"></span><h2 class="h2 serif">List your property</h2>
+      <p style="margin-top:18px">Selling or renting out a home or an office? Send the details in one minute and Hiba will call you back.</p>
+      <ul><li>${IC.check}Professional photos and presentation</li><li>${IC.check}Promotion to serious buyers and tenants</li><li>${IC.check}Private viewings and negotiation handled for you</li></ul></div>
+    <form class="form reveal" id="sellForm">
+      <div class="full seg"><label><input type="radio" name="goal" value="Sell" checked><span>Sell</span></label><label><input type="radio" name="goal" value="Rent out"><span>Rent out</span></label></div>
+      <label><span>Your name</span><input name="name" required autocomplete="name"></label>
+      <label><span>Phone</span><input name="phone" required type="tel" autocomplete="tel" inputmode="tel"></label>
+      <label><span>Property type</span><select name="type"><option>Apartment</option><option>Office</option><option>Shop</option><option>Villa</option><option>Land</option><option>Building</option></select></label>
+      <label><span>Location</span><input name="loc" required placeholder="e.g. Achrafieh"></label>
+      <label><span>Size (m²)</span><input name="size" inputmode="numeric"></label>
+      <label><span>Expected price ($)</span><input name="price" inputmode="numeric"></label>
+      <label class="full"><span>Details</span><textarea name="notes" placeholder="Floor, rooms, view, parking..."></textarea></label>
+      <div class="full" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap"><button class="btn btn-dark" type="submit">${IC.wa} Send on WhatsApp</button><span class="note">Opens WhatsApp with your details written. Just press send.</span></div>
+    </form>
+  </div></section>
+
+  ${contactSec()}`;
+}
+function contactSec(){
+  return `<section class="sec" id="contact"><div class="wrap">
+    <div class="sec-head reveal center" style="display:block"><div class="eyebrow">Get in touch</div><span class="rule"></span><h2 class="serif">Let's find your next address</h2></div>
+    <div class="cgrid">
+      <div class="cbox reveal"><div class="ic">${IC.phone}</div><h3>Call</h3><p>For enquiries and private viewings.</p><a class="l jsTel" data-n="3008025" href="#">+961 3 008 025</a><a class="l jsTel" data-n="70981972" href="#">+961 70 981 972</a></div>
+      <div class="cbox reveal"><div class="ic">${IC.wa}</div><h3>WhatsApp &amp; email</h3><p>Tell us what you need and we'll send matching properties.</p><a class="l" href="#" data-wa="general">Chat on WhatsApp ${IC.arrow}</a><a class="l" href="mailto:${CONFIG.email}">${CONFIG.email}</a></div>
+      <div class="cbox reveal"><div class="ic">${IC.ig}</div><h3>Follow</h3><p>New listings first on Instagram.</p><a class="l" href="${CONFIG.instagram}" target="_blank" rel="noopener">@hibasaad.realestate ${IC.arrow}</a></div>
+    </div></div></section>`;
+}
+function filterProps(q){
+  let r=PROPS.filter(p=>(!q.deal||p.deal===q.deal)&&(!q.type||p.type===q.type)&&(!q.area||p.area===q.area));
+  if(q.sort==='size')r.sort((a,b)=>b.size-a.size);else if(q.sort==='small')r.sort((a,b)=>a.size-b.size);
+  return r;
+}
+function listPage(q,saved){
+  const list=saved?favs.map(byId):filterProps(q), deal=q.deal||'';
+  const sel=(n,opts)=>`<select name="${n}">${opts.map(([v,t])=>`<option value="${v}" ${String(q[n]||'')===v?'selected':''}>${t}</option>`).join('')}</select>`;
+  return `<section class="phead"><div class="wrap">
+    <div class="crumbs"><a href="#/">Home</a> / ${saved?'Saved':'Properties'}</div>
+    <h1 class="serif">${saved?'Saved properties':deal==='rent'?'Properties for rent':deal==='sale'?'Properties for sale':'All properties'}</h1>
+    ${saved?`<p style="color:var(--muted);margin-top:10px">Properties you saved on this device.</p>`:`<form class="filters" id="filters">
+      <div class="seg"><label><input type="radio" name="deal" value="" ${!deal?'checked':''}><span>All</span></label><label><input type="radio" name="deal" value="sale" ${deal==='sale'?'checked':''}><span>Buy</span></label><label><input type="radio" name="deal" value="rent" ${deal==='rent'?'checked':''}><span>Rent</span></label></div>
+      <label class="f"><span>Type</span>${sel('type',[['','All types'],...TYPES.map(t=>[t,t])])}</label>
+      <label class="f"><span>Location</span>${sel('area',[['','All Beirut'],...AREAS.map(a=>[a,a])])}</label>
+      <label class="f"><span>Sort</span>${sel('sort',[['','Featured'],['size','Largest first'],['small','Smallest first']])}</label>
+    </form>`}
+  </div></section>
+  <section class="wrap"><div class="count">${list.length} ${list.length===1?'property':'properties'}</div>
+    ${list.length?`<div class="grid" style="margin-bottom:110px">${list.map(card).join('')}</div>`:
+    `<div class="empty"><h3>${saved?'Nothing saved yet':'No match yet'}</h3><p>${saved?'Tap the heart on any property to keep it here.':'New properties arrive every week. Tell us what you need and we\'ll find it for you.'}</p><div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">${saved?'<a class="btn btn-dark" href="#/properties">Browse properties</a>':`<button class="btn btn-dark" data-wa="general">${IC.wa} Ask on WhatsApp</button><a class="btn btn-line" href="#/properties">Clear filters</a>`}</div></div>`}
+  </section>`;
+}
+function propPage(p){
+  const n=p.img.length, sim=PROPS.filter(x=>x.id!==p.id);
+  const kf=[[IC.area,p.size,'m²'],[IC.type,p.kind||p.type,'Type'],[IC.deal,dealTxt(p),'Listing'],[IC.pin,p.area,'Location']];
+  const q=encodeURIComponent(p.area+', '+p.region+', Lebanon');
+  return `<div class="pp"><div class="wrap">
+    <div class="crumbs"><a href="#/">Home</a> / <a href="#/properties">Properties</a> / ${p.area}</div>
+    <div class="gal">
+      ${p.img.slice(0,3).map((k,i)=>`<button data-lb="${i}" aria-label="Open photo ${i+1}"><img src="${img(k,i>0)}" alt="${esc(p.title)} photo ${i+1}">${i===0?`<span class="all">${IC.grid} ${n} photos</span>`:''}${i===2&&n>3?`<span class="more">+${n-3} photos</span>`:''}</button>`).join('')}
+    </div>
+    <div class="pp-grid">
+      <div>
+        <div class="loc">${IC.pin}${p.area}, ${p.region}</div>
+        <h1 class="serif">${esc(p.title)}</h1>
+        <p class="sub">${esc(p.intro)}</p>
+        <div class="mprice price"><small>${priceLbl(p)}</small>${priceTxt(p)}</div>
+        <div class="kf">${kf.map(([i,b,s])=>`<div>${i}<b>${b}</b><span>${s}</span></div>`).join('')}</div>
+        <h2>About this property</h2><div class="desc">${p.desc.map(t=>`<p>${esc(t)}</p>`).join('')}</div>
+        <h2>Highlights</h2><ul class="feat">${p.features.map(f=>`<li>${IC.check}${esc(f)}</li>`).join('')}</ul>
+        <h2>Location</h2>
+        <div class="mapbox"><div><div class="loc" style="margin-bottom:8px">${IC.map}${p.region}</div><b>${p.area}</b></div><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">Open in Google Maps</a></div>
+      </div>
+      <aside class="side">
+        <div class="price"><small>${priceLbl(p)}</small>${priceTxt(p)}</div>
+        <p style="color:var(--muted);margin-top:10px">${p.kind||p.type} · ${dealTxt(p)} · ${p.size} m²</p>
+        <button class="btn btn-dark" data-ask="${p.id}" style="margin-top:24px">${IC.wa} ${p.price?"I'm interested":'Ask for the price'}</button>
+        <a class="btn btn-line jsTel" data-n="3008025" href="#">${IC.phone} Call 03 008 025</a>
+        <div class="tools"><button data-fav="${p.id}" class="${favs.includes(p.id)?'on':''}">${IC.heart} Save</button><button data-share="${p.id}">${IC.share} Share</button></div>
+        <div class="agent"><img class="logo-img" src="img/mark.png" alt=""><div><b>Hiba Saad</b><span>Real Estate Consultant · since 2006</span></div></div>
+      </aside>
+    </div>
+    ${sim.length?`<div class="sec-head" style="margin-bottom:30px"><div><div class="eyebrow">You may also like</div><span class="rule"></span><h2 class="serif" style="font-size:40px">More properties</h2></div></div><div class="grid" style="margin-bottom:110px">${sim.map(card).join('')}</div>`:''}
+    <div class="mbar"><div class="price"><small>${priceLbl(p)}</small>${priceTxt(p)}</div><a class="btn btn-line jsTel" data-n="3008025" href="#" aria-label="Call">${IC.phone}</a><button class="btn btn-dark" data-ask="${p.id}">${IC.wa} Enquire</button></div>
+  </div></div>`;
+}
+
+/* ---- router ---- */
+let cur=null;
+function parse(){const h=location.hash.replace(/^#\/?/,'');const [path,qs]=h.split('?');return {parts:path.split('/').filter(Boolean),q:Object.fromEntries(new URLSearchParams(qs||''))}}
+function render(){
+  const {parts,q}=parse(); const r=parts[0]||'home';
+  let html,title='Hiba Saad · Real Estate Consultant · Beirut', navOn=r; cur=null;
+  if(r==='properties'){html=listPage(q);title='Properties · Hiba Saad Real Estate'}
+  else if(r==='saved'){html=listPage({},true);title='Saved · Hiba Saad Real Estate';navOn=''}
+  else if(r==='p'&&byId(parts[1])){cur=byId(parts[1]);html=propPage(cur);title=cur.title+' · Hiba Saad Real Estate';navOn='properties'}
+  else html=home();
+  app.innerHTML=html; document.title=title;
+  document.body.classList.toggle('pp-on',!!cur);
+  $$('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===navOn));
+  const sec=['list','about','contact'].includes(r)?$('#'+r):null;
+  if(sec)requestAnimationFrame(()=>window.scrollTo(0,sec.getBoundingClientRect().top+scrollY-80));else window.scrollTo(0,0);
+  onScroll(); observe(); wire();
+}
+function wire(){
+  const s=$('#search'); if(s)s.onsubmit=e=>{e.preventDefault();const p=new URLSearchParams([...new FormData(s)].filter(([,v])=>v));location.hash='#/properties'+(p+''?'?'+p:'')};
+  const f=$('#filters'); if(f)f.onchange=()=>{const p=new URLSearchParams([...new FormData(f)].filter(([,v])=>v));history.replaceState(null,'','#/properties'+(p+''?'?'+p:''));const y=scrollY;render();scrollTo(0,y)};
+  const sf=$('#sellForm'); if(sf)sf.onsubmit=e=>{e.preventDefault();const d=Object.fromEntries(new FormData(sf));
+    const L=[`Hello Hiba, I want to ${d.goal==='Sell'?'sell':'rent out'} my property.`,'','Name: '+d.name,'Phone: '+d.phone,'Type: '+d.type,'Location: '+d.loc];
+    if(d.size)L.push('Size: '+d.size+' m²'); if(d.price)L.push('Expected price: $'+d.price); if(d.notes)L.push('Details: '+d.notes);
+    openWa(L.join('\n'))};
+}
+document.addEventListener('click',e=>{
+  const fav=e.target.closest('[data-fav]'); if(fav){e.preventDefault();e.stopPropagation();toggleFav(fav.dataset.fav);return}
+  const ask=e.target.closest('[data-ask]'); if(ask){e.preventDefault();const p=byId(ask.dataset.ask);
+    openWa(`Hello Hiba, I'm interested in this property:\n${p.title} – ${p.area}\n${p.size} m² · ${dealTxt(p)}${p.price?' · '+priceTxt(p):''}\n${link(p)}\n\n${p.price?'Can I know more and book a visit?':'Can I know the price and book a visit?'}`);return}
+  const wa=e.target.closest('[data-wa]'); if(wa){e.preventDefault();openWa(wa.dataset.wa==='rive'?"Hello Hiba, I'm interested in the commercial spaces for rent at Rive Gauche, Achrafieh. Can I book a private viewing?":"Hello Hiba, I'm looking for a property. Can you help me?");return}
+  const sc=e.target.closest('[data-scroll]'); if(sc){e.preventDefault();const t=$('#'+sc.dataset.scroll);if(t)scrollTo({top:t.getBoundingClientRect().top+scrollY-80,behavior:'smooth'});return}
+  const tel=e.target.closest('.jsTel'); if(tel){e.preventDefault();location.href='tel:+'+intl(tel.dataset.n);return}
+  const sh=e.target.closest('[data-share]'); if(sh){const p=byId(sh.dataset.share),u=link(p);
+    if(navigator.share)navigator.share({title:p.title,text:p.title,url:u}).catch(()=>{});
+    else{(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>toast('Link copied'),()=>prompt('Copy this link',u))}return}
+  const lb=e.target.closest('[data-lb]'); if(lb){openLb(+lb.dataset.lb);return}
+});
+$('#waFloat').onclick=e=>{e.preventDefault();if(cur)$('[data-ask]').click();else openWa("Hello Hiba, I'm looking for a property. Can you help me?")};
+
+/* lightbox */
+let li=0;
+function openLb(i){li=i;$('#lbT').innerHTML=cur.img.map((k,j)=>`<img src="${img(k,1)}" data-j="${j}" alt="">`).join('');showLb();$('#lb').classList.add('open');document.body.style.overflow='hidden'}
+function showLb(){const n=cur.img.length;li=(li+n)%n;$('#lbI').src=img(cur.img[li]);$('#lbI').alt=cur.title+' photo '+(li+1);$('#lbN').textContent=(li+1)+' / '+n;$$('#lbT img').forEach((t,j)=>t.classList.toggle('on',j===li));$('#lbT img.on')?.scrollIntoView({inline:'center',block:'nearest'})}
+function closeLb(){$('#lb').classList.remove('open');document.body.style.overflow=''}
+$('#lbX').onclick=closeLb;$('#lbP').onclick=()=>{li--;showLb()};$('#lbNx').onclick=()=>{li++;showLb()};
+$('#lbT').onclick=e=>{const t=e.target.closest('[data-j]');if(t){li=+t.dataset.j;showLb()}};
+$('#lb').addEventListener('click',e=>{if(e.target.classList.contains('stage'))closeLb()});
+document.addEventListener('keydown',e=>{if(!$('#lb').classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft'){li--;showLb()}if(e.key==='ArrowRight'){li++;showLb()}});
+let tx=null;$('#lb').addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+$('#lb').addEventListener('touchend',e=>{if(tx==null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>45){li+=d<0?1:-1;showLb()}tx=null});
+
+function onScroll(){$('#hdr').classList.toggle('solid',scrollY>20)}
+addEventListener('scroll',onScroll,{passive:true});
+let io;function observe(){if(!('IntersectionObserver'in window)){$$('.reveal').forEach(e=>e.classList.add('in'));return}
+  io&&io.disconnect();io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{rootMargin:'0px 0px -8% 0px'});$$('.reveal').forEach(e=>io.observe(e))}
+
+$('#yr').textContent=new Date().getFullYear();
+saveFavs();
+addEventListener('hashchange',render);
+render();
+</script>
+</body>
+</html>
